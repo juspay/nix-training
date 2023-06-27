@@ -2,7 +2,13 @@
 
 > **Note**
 >
-> This is **work-in-progress** 🚧.
+> This is actively a **work-in-progress** 🚧.
+
+## Goal
+
+This training series will start with a bunch of demos--the cool things [Nix](https://nixos.org/) can do--to motivate the user. Then we iteratively build up on Nix knowledge, starting with the foundations, then going on to flakes, and thereon to the module system which is necessary for understanding flake-parts that is integral to many real-world projects using Nix.
+
+The goal is to enable the audience to work towards grasping all the concepts involved in writing and creating the likes of [haskell-template](https://github.com/srid/haskell-template/blob/master/flake.nix) or [haskell-flake](https://github.com/srid/haskell-flake), and more generally get comfortable with writing Nix.
 
 ## Outline
 
