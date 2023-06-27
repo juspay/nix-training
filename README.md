@@ -1,5 +1,11 @@
 # Nix training
 
+> **Note**
+>
+> This is **work-in-progress** 🚧.
+
+Srid's WIP Nix training material.
+
 ## Levels
 
 - [Level 0](./levels/0/README.md)
