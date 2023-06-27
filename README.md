@@ -20,3 +20,10 @@ The goal is to enable the audience to work towards grasping all the concepts inv
 | 3 | Module system | Write a module to simplify the Rust flake |
 | 4 | flake-parts | Convert that Rust project from level 2/3 to use flake-parts. Make a mono repo, and add frontend (eg: rescript), with its own flake-parts module - Combine the two modules at top-level flake (like we do for nammayatri). |
 | 5 | Advanced | Write your own flake-parts modules (use process-compose/mission-control module as examples) |
+
+## Structure of a level
+
+Each level includes a video presentation with hands-on demo of the code involved. They also include:
+
+- Further readings
+- Exercises
