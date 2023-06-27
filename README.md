@@ -4,20 +4,19 @@
 >
 > This is **work-in-progress** 🚧.
 
-Srid's WIP Nix training material.
-
 ## Levels
 
 - [Level 0](./levels/0/README.md)
+- [Level 1](./levels/1/README.md)
 
 
 ## Outline
 
-### Level 0  (today)
+### Level 0
 **Intro**, demos, motivation
 
 ### Level 1
-**Nix foundations** (the language, standard library, derivations)
+**Nix foundations** (the language, standard library, derivations, nix store)
 
 ### Level 2
 **Flakes** 
