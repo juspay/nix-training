@@ -3,7 +3,12 @@ let
 in
 rec {
   # Single file
-  aFile = pkgs.runCommand "aFile" { } ''
+  aFile1 = pkgs.writeTextFile {
+    name = "aFile";
+    text = "Single file path";
+  };
+
+  aFile2 = pkgs.runCommand "aFile" { } ''
     echo "Single file path" > $out
   '';
 
@@ -12,7 +17,8 @@ rec {
     mkdir -p $out
     echo "Hello, world!" > $out/someFile
     echo "Hello, world!!!!" > $out/anotherFile
-    ln -sf ${aFile} $out/aFile
+    ln -sf ${aFile2} $out/aFile
+    # NOTE: network accessible not possible, as drvs are sandboxed
   '';
 
   # Downloaded off the internet
@@ -49,5 +55,13 @@ rec {
       cd $src
       gcc main.c -o $out/bin/some-binary
     '';
+  };
+
+  someShell = pkgs.mkShell {
+    name = "some-shell";
+    nativeBuildInputs = [ 
+      pkgs.htop 
+      someBinary
+    ];
   };
 }
