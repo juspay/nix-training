@@ -2,6 +2,8 @@
 marp: true
 ---
 
+TODO: Rewrite this
+
 # Level 0
 
 Let's see what Nix is capable of.

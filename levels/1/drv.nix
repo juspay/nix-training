@@ -1,4 +1,5 @@
 let
+  # Nix standard library
   pkgs = import <nixpkgs> { };
 in
 rec {
@@ -43,17 +44,18 @@ rec {
     '';
   };
 
-  gcc = pkgs.gcc;
+  rustc = pkgs.rustc;
 
+  # Build a simple Rust program
   someBinary = pkgs.stdenv.mkDerivation {
     name = "some-binary";
-    src = ./c;
-    buildInputs = [ pkgs.gcc ];
+    src = ./rust;
+    buildInputs = [ pkgs.rustc ];
     phases = [ "buildPhase" ];
     buildPhase = ''
       mkdir -p $out/bin
       cd $src
-      gcc main.c -o $out/bin/some-binary
+      rustc main.rs -o $out/bin/some-binary
     '';
   };
 

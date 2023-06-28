@@ -1,3 +1,5 @@
+# nix-build pc.nix -A myapp -o myapp
+# ./myapp
 let
   pkgs = import <nixpkgs> { };
 in
@@ -6,8 +8,10 @@ rec {
     name = "pc.yaml";
     text = builtins.toJSON {
       processes = {
-        hello = {
-          command = "echo Hello";
+        clock = {
+          command = ''
+            bash -c "while true; do date; sleep 1; done"
+          '';
         };
       };
     };
@@ -15,11 +19,12 @@ rec {
 
   pc = pkgs.process-compose;
 
-  app = pkgs.writeShellScript "myapp" ''
+  myapp = pkgs.writeShellScript "myapp" ''
     ${pc}/bin/process-compose -f ${configFile} $*
   '';
 
-  # TODO: dockerImage
+  # TODO: dockerImage (Linux only)
 }
 
 # TODO: Exercise.
+# Reproduce the sqlite-web demo from ../0/process-compose but in this file.
