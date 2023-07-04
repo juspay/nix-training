@@ -10,6 +10,10 @@ This training series will start with a bunch of demos--the cool things [Nix](htt
 
 The goal is to enable the audience to work towards grasping all the concepts involved in writing and creating the likes of [haskell-template](https://github.com/srid/haskell-template/blob/master/flake.nix) or [haskell-flake](https://github.com/srid/haskell-flake), and more generally get comfortable with writing Nix.
 
+## Prerequisites
+
+You must have Nix installed on your system. We recommend [the Determinate installer](https://github.com/DeterminateSystems/nix-installer). You can of course also install [NixOS](https://nixos.org/) (a Linux distribution based on Nix) if you are feeling adventurous.
+
 ## Outline
 
 | Level | Title | Description |

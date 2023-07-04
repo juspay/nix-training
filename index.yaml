@@ -1,0 +1,7 @@
+template:
+  urlStrategy: pretty
+
+page:
+  siteTitle: Nix Training
+  headHtml: |
+    <snippet var="js.highlightjs" />
